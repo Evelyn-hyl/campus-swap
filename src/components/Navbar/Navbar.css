@@ -1,0 +1,121 @@
+.nav-bar {
+    padding: 20px 100px 20px 100px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    justify-content: space-between;
+    display: flex;
+  }
+  
+  .search-bar-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .search-box {
+    font-family:'LexandDeca';
+    font-weight: lighter;
+    font-size: 13px;
+    border: 2px solid #9db7aa;
+    padding: 10px 10px 10px 45px;
+    background-color: #ffffff;
+    color: #eeaeae;
+    height: 30px;
+  }
+  
+  .search-box::placeholder {
+    color: #eeaeae;
+  }
+  
+  .search-box:focus {
+    outline: none;
+  }
+  
+  .search-box:focus::placeholder {
+    color: transparent;
+  }
+  
+  .school {
+    border-radius: 10px 0px 0px 10px;
+    width: 200px;
+  }
+  
+  .search {
+    border-radius: 0px 10px 10px 0px;
+    border-left-width: 0px;
+    width: 500px;
+  }
+  
+  .logo-wrapper {
+    display: inline-flex;
+    width: 30PX;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #menu-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  #menu-button:focus {
+    outline: none;
+  }
+  
+  .menu-icon {
+    color:#9db7aa;
+    font-size: 2em;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-icon:hover {
+    color:#eeaeae;
+  }
+  
+  .shopping-bag-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .shopping-bag-button:focus {
+    outline: none;
+  }
+  
+  .shopping-bag-icon {
+    color:#9db7aa;
+    font-size: 2em;
+    transition: color 0.3s ease;
+  }
+  
+  .shopping-bag-icon:hover {
+    color:#eeaeae;
+  }
+  
+  .location-icon {
+    color:#eeaeae;
+    position:absolute;
+  }
+  
+  .logo-wrapper--location {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -25.3%;
+    left: 20px;
+  
+  }
+  
+  .logo-wrapper--search {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -25.3%;
+    left: 275px;
+  }

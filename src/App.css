@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'TheBoldFont';
+  src: url(./assets/The-Bold-Font.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'LexandDeca';
+  font-weight: lighter;
+  src: url(./assets/LexendDeca-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'LexandDeca';
+  font-weight: normal;
+  src: url(./assets/LexendDeca-Regular.woff) format('woff');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff9ef;
+
+}
+
+.top-bar {
+  height: 10px;
+  background-color: #9db7aa;
+
+}
+.bar-wrapper {
+  position: sticky;
+  width:  100%;
+  z-index: 3;
+}
+
+.header-bar {
+  display: flex;
+  padding: 20px 80px 5px 80px;
+  min-height: 45px;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  align-items: center;
+}
+
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+#logo-img {
+  width: 200px;
+}
+
+.main-content-wrapper {
+  height: 100%;
+  padding: 50px 350px 50px 350px;
+}

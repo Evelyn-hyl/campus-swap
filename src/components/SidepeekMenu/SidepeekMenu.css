@@ -1,0 +1,55 @@
+.sidepeek-menu {
+    position: fixed;
+    top: 170px;
+    left: -600px;
+    width: 290px;
+    height: calc(100% - 170px);
+    padding: 60px 0px 40px 60px;
+    background-color: #9db7aa;
+    transition: left 0.4s ease;
+    z-index: 1100;
+    overflow-y: auto;
+    font-family: 'TheBoldFont';
+    color: #fff9ef;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu_list {
+    margin: 0px;
+    width: 200px;
+    background-color: #9db7aa;
+    list-style-type: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  
+  .menu_list li {
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu_list li:hover {
+    color:#eeaeae;
+  }
+  
+  .sidepeek-menu--open {
+    left: 0px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 170px; /* Start from top; adjust if header is fixed */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    z-index: 999; /* Below the sidepeek menu */
+  }
+  
+  .overlay--visible {
+    visibility: visible;
+    opacity: 1;
+  }
