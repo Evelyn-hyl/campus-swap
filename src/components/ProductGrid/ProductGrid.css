@@ -19,7 +19,7 @@
     align-items: left;
     flex-direction: column;
   }
-  
-  .product-card-content {
-    padding: 0px;
+
+  .heart-icon {
+    color: #ffffff;
   }

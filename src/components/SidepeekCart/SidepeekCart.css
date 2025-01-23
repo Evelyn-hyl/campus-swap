@@ -94,4 +94,5 @@
 
 .checkout-button:hover {
     background-color: #eeaeae;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
