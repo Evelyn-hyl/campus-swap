@@ -31,6 +31,8 @@ html, body {
   position: sticky;
   width:  100%;
   z-index: 3;
+  top: 0;
+  background-color: #fff9ef;
 }
 
 .header-bar {

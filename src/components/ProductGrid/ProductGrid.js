@@ -9,11 +9,11 @@ import './ProductGrid.css'
 const StyledCard = styled(Card)(({ theme }) => ({
     width: '100%',
     maxWidth: 350,
-    border: '2px solid white',      // Default border
-    borderRadius: '8px',            // Rounded corners
-    transition: 'border-color 0.3s ease', // Smooth animation
+    border: '2px solid white',
+    borderRadius: '8px',
+    transition: 'border-color 0.3s ease',
     '&:hover': {
-      borderColor: '#9db7aa',       // Optional: Change border color on hover
+      borderColor: '#9db7aa',
     },
   }));
 
@@ -27,14 +27,14 @@ export function ProductGrid() {
         { id: 6, name: 'Laundry Basket', description: '$ 4.50', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHb-NhQYsFp5vhF8nF2RyeQytbioRYDI30QA&s', },
         { id: 7, name: 'Storage Bin', description: '$ 2.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQPjMFwm1ceMecqvEq1Yyp2Fiup_vyekQFw&s', },
         { id: 8, name: 'Wall Mirror', description: '$ 2.00', image: 'https://i.etsystatic.com/20262970/r/il/b1d689/2512024758/il_570xN.2512024758_6og6.jpg', },
-        { id: 1, name: 'Floor Rug', description: '$ 10.00', image: 'https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/0ede88e6-9f35-45f0-20b7-c252a6899d00/86', },
-        { id: 2, name: 'Table Fan', description: '$ 5.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROPuyQjEg3X80aD_9KXCbW19NDU6XUOt4ZFx1flKoiy5EQHPb4je6uygBEV6YoBbqVkk&usqp=CAU', },
-        { id: 3, name: 'Bean Bag', description: '$ 35.00', image: 'https://for-sale.used-secondhand.co.uk/media/used/secondhand/images/95583/13x-black-and-white-bean-bags-devon/500/black-leather-bean-bags-for-sale-987.jpg', },
-        { id: 4, name: 'Study Desk', description: '$ 50.00', image: 'https://media.karousell.com/media/photos/products/2021/7/20/second_hand_study_desk_table_w_1626778869_2a9f5adc_progressive.jpg', },
-        { id: 5, name: 'Bedside Table', description: '$ 24.00', image: 'https://i.ebayimg.com/images/g/R6kAAOSwJoljHkIg/s-l1200.jpg', },
-        { id: 6, name: 'Curtains', description: '$ 3.00', image: 'https://pinchbackcurtains.co.uk/wp-content/uploads/Great-quality-second-hand-curtains.jpg', },
-        { id: 7, name: 'Shoe Rack', description: '$ 8.00', image: 'https://i.etsystatic.com/14191678/r/il/62c868/5389984390/il_fullxfull.5389984390_f1fj.jpg', },
-        { id: 8, name: 'Closet Organizer', description: '$ 3.00', image: 'https://di2ponv0v5otw.cloudfront.net/posts/2022/10/26/635904498d7a3c71adb91f37/m_wp_63590455f8c5da0fb78a7f68.webp', },
+        { id: 9, name: 'Floor Rug', description: '$ 10.00', image: 'https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/0ede88e6-9f35-45f0-20b7-c252a6899d00/86', },
+        { id: 10, name: 'Table Fan', description: '$ 5.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROPuyQjEg3X80aD_9KXCbW19NDU6XUOt4ZFx1flKoiy5EQHPb4je6uygBEV6YoBbqVkk&usqp=CAU', },
+        { id: 11, name: 'Bean Bag', description: '$ 35.00', image: 'https://for-sale.used-secondhand.co.uk/media/used/secondhand/images/95583/13x-black-and-white-bean-bags-devon/500/black-leather-bean-bags-for-sale-987.jpg', },
+        { id: 12, name: 'Study Desk', description: '$ 50.00', image: 'https://media.karousell.com/media/photos/products/2021/7/20/second_hand_study_desk_table_w_1626778869_2a9f5adc_progressive.jpg', },
+        { id: 13, name: 'Bedside Table', description: '$ 24.00', image: 'https://i.ebayimg.com/images/g/R6kAAOSwJoljHkIg/s-l1200.jpg', },
+        { id: 14, name: 'Curtains', description: '$ 3.00', image: 'https://pinchbackcurtains.co.uk/wp-content/uploads/Great-quality-second-hand-curtains.jpg', },
+        { id: 15, name: 'Shoe Rack', description: '$ 8.00', image: 'https://i.etsystatic.com/14191678/r/il/62c868/5389984390/il_fullxfull.5389984390_f1fj.jpg', },
+        { id: 16, name: 'Closet Organizer', description: '$ 3.00', image: 'https://di2ponv0v5otw.cloudfront.net/posts/2022/10/26/635904498d7a3c71adb91f37/m_wp_63590455f8c5da0fb78a7f68.webp', },
         // ...more products
       ];
     

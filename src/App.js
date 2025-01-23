@@ -69,9 +69,9 @@ export default function App() {
       <SidepeekCart isOpened={isCartOpened} onClose={closeCart}/>
       
       {/* Items */}
-      <div className='main-content-wrapper'>
+      <main className='main-content-wrapper'>
         <ProductGrid />
-      </div>
+      </main>
     </>
   );
 }
