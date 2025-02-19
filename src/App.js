@@ -1,16 +1,18 @@
-import logo from './assets/Campus-Swap-Logo.svg'
+import { HeaderBar } from './components/HeaderBar/HeaderBar.js';
 import { Navbar } from './components/Navbar/Navbar.js';
 import { SidepeekMenu } from './components/SidepeekMenu/SidepeekMenu.js'
 import { SidepeekCart } from './components/SidepeekCart/SidepeekCart.js';
+import { SidepeekFilters } from './components/SidepeekFilters/SidepeekFilters.js';
 import { ProductGrid } from './components/ProductGrid/ProductGrid.js';
+import { Footer } from './components/Footer/Footer.js'
 
 import { useState } from 'react';
 import './App.css';
 
-
 export default function App() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isCartOpened, setIsCartOpened] = useState(false);
+  const [isFiltersOpened, setIsFiltersOpened] = useState(false);
 
   const openMenu = () => {
     setIsMenuOpened(true);
@@ -45,6 +47,20 @@ export default function App() {
     }
   }
 
+  const handleFiltersClick = () => {
+    if (isFiltersOpened === false) {
+      setIsFiltersOpened(true);
+      console.log("filters menu opened");
+    } else {
+      closeFilters();
+    }
+  }
+
+  const closeFilters = () => {
+    setIsFiltersOpened(false);
+    console.log("filters closed");
+  }
+
   return (
     <>
       <header className='bar-wrapper'>
@@ -52,26 +68,27 @@ export default function App() {
         <div className='top-bar'></div>
 
         {/* Header Bar */}
-        <div className="header-bar">
-          <img src={logo} id='logo-img' alt='CAMPUS SWAP'></img>
-
-          {/* login section wrapper */}
-          <div className=''></div>
-        </div>
+        <HeaderBar/>
 
         {/* Nav Bar */}
         <Navbar handleMenuClick={handleMenuClick} handleCartClick={handleCartClick}/>
       </header>
 
-      {/* Side Peek Menu */}
+      {/* Sidepeeks*/}
       <SidepeekMenu isOpened={isMenuOpened} onClose={closeMenu}/>
 
       <SidepeekCart isOpened={isCartOpened} onClose={closeCart}/>
       
+      <SidepeekFilters isOpened={isFiltersOpened} onClose={closeFilters}/>
+
       {/* Items */}
       <main className='main-content-wrapper'>
-        <ProductGrid />
+        <ProductGrid handleFiltersClick={handleFiltersClick}/>
       </main>
+
+      <footer className='footer-wrapper'>
+        <Footer />
+      </footer>
     </>
   );
 }

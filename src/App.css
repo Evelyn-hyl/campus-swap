@@ -15,6 +15,12 @@
   src: url(./assets/LexendDeca-Regular.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'LexandDeca';
+  font-weight: bold;
+  src: url(./assets/LexendDeca-Bold.woff) format('woff');
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -35,24 +41,12 @@ html, body {
   background-color: #fff9ef;
 }
 
-.header-bar {
-  display: flex;
-  padding: 20px 80px 5px 80px;
-  min-height: 45px;
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
-  align-items: center;
-}
-
-.logo-wrapper {
-  display: inline-flex;
-  align-items: center;
-}
-
-#logo-img {
-  width: 200px;
-}
-
 .main-content-wrapper {
   height: 100%;
-  padding: 50px 350px 50px 350px;
+  padding: 100px 350px;
+}
+
+.footer-wrapper {
+  height: 380px;
+  background-color:#fff9ef;
 }

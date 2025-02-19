@@ -16,7 +16,7 @@
   .search-box {
     font-family:'LexandDeca';
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 14px;
     border: 2px solid #9db7aa;
     padding: 10px 10px 10px 45px;
     background-color: #ffffff;
@@ -35,14 +35,31 @@
   .search-box:focus::placeholder {
     color: transparent;
   }
+
+  .search-box input {
+    overflow: hidden;
+  }
+
+  .search-box-dropdown {
+    position: absolute;
+    background-color: #ffffff;
+    font-family: 'LexandDeca', sans serif;
+    width: 200px;
+    height: 200px;
+    visibility: hidden;
+  }
+
+  .school-dropdown--open {
+    visibility: visible;
+  }
   
   .school {
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 25px 0px 0px 25px;
     width: 200px;
   }
   
   .search {
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 25px 25px 0px;
     border-left-width: 0px;
     width: 500px;
   }

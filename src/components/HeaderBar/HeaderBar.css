@@ -1,0 +1,47 @@
+.header-bar {
+    display: flex;
+    padding: 20px 80px 5px 80px;
+    min-height: 45px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+#logo-img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.login-button-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.login-button {
+    width: 120px;
+    height: 40px;
+    background-color: #eeaeae;
+    border: 1.5px solid transparent;
+    padding: 13px;
+    color: #fff9ef;
+    bottom: 80px;
+    font-family: 'TheBoldFont', Impact;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease, border 0.3s ease, color 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.login-button:hover {
+  border: 1.5px solid #eeaeae;
+  background-color: transparent;
+  color: #eeaeae;
+}

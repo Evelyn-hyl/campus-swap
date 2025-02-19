@@ -1,0 +1,29 @@
+.footer-upper {
+    height: 300px;
+    background-color: #9db7aa;
+    padding: 10px 350px;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-content_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px 160px 0px 0px;
+}
+
+.footer-header {
+    font-family: 'TheBoldFont';
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.footer-lower {
+    height: 80px;
+    background-color: #8ea59a;
+}
+
