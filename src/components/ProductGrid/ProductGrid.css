@@ -10,6 +10,57 @@
     align-items: center;
     cursor: pointer;
   }
+
+  .filters-wrapper {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0px;
+  }
+
+  .filters-button {
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid #eeaeae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'LexandDeca';
+    font-weight: normal;
+    font-size: 14px;
+    color:#eeaeae;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border 0.3s ease, color 0.2s ease;
+    width: 90px;
+    height: 30px;
+  }
+
+  .filters-button:hover {
+    border: 1.9px solid #eeaeae;
+    background-color: #eeaeae;
+    color: #fff9ef;
+  }
+
+  .filters-icon {
+    color: #eeaeae;
+    font-size: 1.3em;
+    margin: 0px 5px 0px 0px; 
+  }
+
+  .filters-button:hover .filters-icon {
+    color: #fff9ef; /* Changes the icon color on hover */
+}
+
+
+  .item-count {
+    color:#eeaeae;
+    font-family: "LexandDeca", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0px 5px;
+  }
   
   .product-card {
     width: 100%;

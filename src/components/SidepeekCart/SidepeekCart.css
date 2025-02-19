@@ -27,7 +27,7 @@
 }
 
 .h3 {
-    font-family: 'TheBoldFont';
+    font-family: 'TheBoldFont', Impact;
     color: #9db7aa;
     margin: 0;
 }
@@ -36,6 +36,7 @@
     border: none;
     background-color: transparent;
     font-size: 1.5em;
+    padding: 1px;
 }
 
 .exit-icon {
@@ -84,12 +85,13 @@
     bottom: 80px;
     font-family: 'TheBoldFont', Impact;
     letter-spacing: 2px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: medium;
+    padding: 18px;
 }
 
 .checkout-button:hover {

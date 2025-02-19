@@ -1,23 +1,36 @@
 import { Box, Grid2, Card, CardContent, Typography, CardMedia, IconButton } from '@mui/material';
 import { FaRegHeart } from "react-icons/fa";
+import { MdFilterListAlt } from "react-icons/md";
 import { IconContext } from "react-icons"
+
 import { styled } from '@mui/material/styles';
 
-import './ProductGrid.css'
+import './ProductGrid.css';
 
 
 const StyledCard = styled(Card)(({ theme }) => ({
     width: '100%',
     maxWidth: 350,
-    border: '2px solid white',
-    borderRadius: '8px',
-    transition: 'border-color 0.3s ease',
+    backgroundColor: 'transparent',
+    transition: 'transform 0.3s ease-out, border-color 0.3s ease-out',
+    overflow: 'hidden',
+    boxShadow: 'none',
+    border: '2px solid transparent',
+    borderRadius: '10px',
+    '& .MuiCardMedia-root': {
+        transition: 'transform 0.3s ease-out',
+        borderRadius: '10px',
+    },
     '&:hover': {
-      borderColor: '#9db7aa',
+        borderColor: '#9db7aa', // White border appears on hover
+        borderRadius: '10px',
+    },
+    '&:hover .MuiCardMedia-root': {
+        transform: 'scale(0.96)',
     },
   }));
 
-export function ProductGrid() {
+export function ProductGrid({ handleFiltersClick }) {
     const products = [
         { id: 1, name: 'Desk Lamp', description: '$ 10.00', image: 'https://rataplan.nl/wp-content/uploads/2024/09/Tafellamp-Lucide-wit-15209886.jpg', },
         { id: 2, name: 'Mini Fridge', description: '$ 30.00', image: 'https://i.ebayimg.com/images/g/lT0AAOSwR3piXY4F/s-l400.jpg', },
@@ -38,9 +51,21 @@ export function ProductGrid() {
         // ...more products
       ];
     
-    
+
     return (
         <>
+            <div className='filters-wrapper'>
+                <button className='filters-button' onClick={ handleFiltersClick }>
+                    <IconContext.Provider value={{ className: 'filters-icon' }}>
+                        <MdFilterListAlt />
+                    </IconContext.Provider>
+                    Filters 
+                </button>
+                <div className='item-count-wrapper'>
+                    <h6 className='item-count'>16 Items</h6>
+                </div>
+            </div>
+            
             <Grid2 container className='grid-container' rowSpacing={2} columnSpacing={{ xs: 1, md: 2 }} columns={16}>
                 {products.map((product) => (
                     <Grid2 item className='grid' size={{ xs: 12, sm: 6, md: 6, lg: 4 }} key={product.id}>
@@ -59,8 +84,8 @@ export function ProductGrid() {
                             <IconButton
                                 sx={{
                                 position: 'absolute',
-                                bottom: 80,
-                                right: 8,
+                                bottom: 85,
+                                right: 10,
                                 }}
                             >
                                 <IconContext.Provider value={{ className:'heart-icon'}}>
@@ -70,9 +95,9 @@ export function ProductGrid() {
                                 </IconContext.Provider>
                             </IconButton>
 
-                            <CardContent sx={{ pt: 1.5}} className='product-card-content'>
-                            <Typography variant="body1" sx={{ fontFamily: 'LexandDeca', color: '#eeaeae', letterSpacing: -0.5 }}>{product.name}</Typography>
-                            <Typography variant="body2" sx={{ fontFamily: 'TheBoldFont', color: '#9db7aa'}}>{product.description}</Typography>
+                            <CardContent sx={{ pt: 2}} className='product-card-content'>
+                            <Typography variant="body1" sx={{ fontFamily: 'TheBoldFont', color: '#9db7aa', letterSpacing: 0.5, marginBottom: '2px' }}>{product.name}</Typography>
+                            <Typography variant="body1" sx={{ fontFamily: 'LexandDeca', color: '#eeaeae', marginTop: '-5px', fontSize: '0.9rem', }}>{product.description}</Typography>
                             </CardContent> 
                         </Box>
                     </StyledCard>

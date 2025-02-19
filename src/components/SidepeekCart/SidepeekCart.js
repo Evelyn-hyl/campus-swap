@@ -1,6 +1,6 @@
 import './SidepeekCart.css';
 import { RxCross2 } from "react-icons/rx";
-import { IconContext } from "react-icons"
+import { IconContext } from "react-icons";
 
 export function SidepeekCart({ isOpened, onClose }) {
     return (
