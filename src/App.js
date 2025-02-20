@@ -39,21 +39,13 @@ export default function App() {
   }
 
   const handleCartClick = () => {
-    if (isCartOpened === false) {
-      setIsCartOpened(true);
-      console.log("cart opened");
-    } else {
-      closeCart();
-    }
+    setIsCartOpened((prev) => !prev); // ✅ Flips the state automatically
+    console.log(isCartOpened ? "cart closed" : "cart opened");
   }
 
   const handleFiltersClick = () => {
-    if (isFiltersOpened === false) {
-      setIsFiltersOpened(true);
-      console.log("filters menu opened");
-    } else {
-      closeFilters();
-    }
+    setIsFiltersOpened((prev) => !prev); // ✅ Flips the state automatically
+    console.log(isCartOpened ? "filters menu closed" : "filters menu opened");
   }
 
   const closeFilters = () => {

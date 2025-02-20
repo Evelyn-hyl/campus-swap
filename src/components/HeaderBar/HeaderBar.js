@@ -3,7 +3,7 @@ import logo from '../../assets/Campus-Swap-Logo.svg'
 import { useAuth0 } from "@auth0/auth0-react";
 
 export function HeaderBar() {
-    const { loginWithRedirect, logout, user, isAuthenticated }= useAuth0();
+    const { loginWithRedirect, logout, isAuthenticated }= useAuth0();
     console.log("Redirect URI:", window.location.origin);
 
     return (
