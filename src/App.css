@@ -4,8 +4,7 @@
 }
 
 @font-face {
-  font-family: 'LexandDeca';
-  font-weight: lighter;
+  font-family: 'LexandDecaLight';
   src: url(./assets/LexendDeca-Light.woff) format('woff');
 }
 
@@ -26,27 +25,4 @@ html, body {
   padding: 0;
   background-color: #fff9ef;
 
-}
-
-.top-bar {
-  height: 10px;
-  background-color: #9db7aa;
-
-}
-.bar-wrapper {
-  position: sticky;
-  width:  100%;
-  z-index: 3;
-  top: 0;
-  background-color: #fff9ef;
-}
-
-.main-content-wrapper {
-  height: 100%;
-  padding: 100px 350px;
-}
-
-.footer-wrapper {
-  height: 380px;
-  background-color:#fff9ef;
 }

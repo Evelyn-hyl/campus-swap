@@ -1,0 +1,123 @@
+.top-bar {
+  height: 10px;
+  background-color: #9db7aa;
+
+}
+.bar-wrapper {
+  position: sticky;
+  width:  100%;
+  z-index: 3;
+  top: 0;
+  background-color: #fff9ef;
+}
+
+.main-content-wrapper {
+  height: 100%;
+  padding: 50px 100px;
+  justify-content: center;
+}
+
+.footer-wrapper {
+  height: 380px;
+  background-color:#fff9ef;
+}
+
+.product-image-info-container {
+  justify-content:center;
+}
+
+.product-name {
+  font-family: 'TheBoldFont', Impact;
+  color: #484238;
+  font-size: 21px;
+  letter-spacing: 1.5px;
+  margin-bottom: 0px;
+}
+
+.product-description-wrapper {
+  width: 80%;
+  max-width: 350;
+  margin: 0;
+  padding: 0;
+}
+
+.product-brief-description {
+  font-family: 'LexandDecaLight';
+  letter-spacing: 0.5px;
+  margin: 0px;
+  color:#484238;
+  font-size: 15px;
+}
+
+.product-price {
+  font-family: 'TheBoldFont', Impact;
+  color:#484238;
+  font-size: 21px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.button {
+  width: 100%;
+  height: 45px;
+  background-color: #eeaeae;
+  border: none;
+  color: #fff9ef;
+  position: relative;
+  font-family: 'TheBoldFont', Impact;
+  letter-spacing: 2px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 15px;
+  margin-bottom: 8px;
+}
+
+.button:hover {
+    background-color: #9db7aa;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.green-button {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: 2px #9db7aa solid;
+  color: #9db7aa;
+  position: relative;
+  font-family: 'TheBoldFont', Impact;
+  letter-spacing: 2px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 15px;
+  margin-bottom: 8px;
+}
+
+.green-button:hover {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #9db7aa;
+}

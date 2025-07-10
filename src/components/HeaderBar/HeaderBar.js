@@ -24,7 +24,7 @@ export function HeaderBar() {
                     </button>
                     </>
                 ) : (
-                    <button className='login-button' onClick={ ()=> loginWithRedirect() }>LOG IN</button>
+                    <button className='login-button' onClick={ ()=> loginWithRedirect() }>LOGIN</button>
                 )}
             </div>
         </div>

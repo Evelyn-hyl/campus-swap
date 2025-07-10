@@ -3,14 +3,25 @@ import { FaSearch } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import { IconContext } from "react-icons"
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import states from '../../data/usStates'
-import './Navbar.css';
+import './NavBar.css';
 
-export function Navbar({ handleMenuClick, handleCartClick }) {
+export function NavBar({ handleMenuClick, handleCartClick }) {
   const [isSchoolDropdownOpened, setIsSchoolDropdownOpened] = useState(false);
   const schoolInputRef = useRef(null);
+  const dropdownRef = useRef(null);
 
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsSchoolDropdownOpened(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleSchoolSelect = (stateName) => {
     if (schoolInputRef.current) {
@@ -27,7 +38,7 @@ export function Navbar({ handleMenuClick, handleCartClick }) {
         <nav className='nav-bar'>
 
           <div className='logo-wrapper'>
-            <button id='menu-button' onClick={handleMenuClick}>
+            <button id='menu-button' ref={dropdownRef} onClick={handleMenuClick}>
               <IconContext.Provider value={{ className:'menu-icon'}}>
                 <div>
                   <TiThMenu />
