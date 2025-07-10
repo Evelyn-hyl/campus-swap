@@ -28,3 +28,27 @@
     text-decoration: none;
     color: inherit;
   }
+
+  .custom-card {
+  width: 100%;
+  max-width: 350px;
+  background-color: transparent;
+  transition: transform 0.3s ease-out, border-color 0.3s ease-out;
+  overflow: hidden;
+  box-shadow: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.custom-card:hover {
+  border-color: #9db7aa;
+}
+
+.custom-card .MuiCardMedia-root {
+  transition: transform 0.3s ease-out;
+  border-radius: 10px;
+}
+
+.custom-card:hover .MuiCardMedia-root {
+  transform: scale(0.96);
+}
