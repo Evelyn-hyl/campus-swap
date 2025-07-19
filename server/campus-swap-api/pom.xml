@@ -29,6 +29,7 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	<!-- Dependency Chart -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -74,7 +75,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	<!-- Build Plugin: Maven -->
 	<build>
 		<plugins>
 			<plugin>
