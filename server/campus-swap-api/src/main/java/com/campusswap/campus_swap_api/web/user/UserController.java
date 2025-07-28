@@ -1,8 +1,7 @@
 package com.campusswap.campus_swap_api.web.user;
 
 import com.campusswap.campus_swap_api.domain.user.User;
-import com.campusswap.campus_swap_api.service.user.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.campusswap.campus_swap_api.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,28 +9,37 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/user")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserRepository userRepository;
 
-    @GetMapping("/{uid}")
+    UserController(UserRepository repository) {
+        userRepository = repository;
+    }
+
+    @GetMapping("")
     public ResponseEntity<User> getUser(@PathVariable Long uid) {
         // TODO: Implement UserService invocation
         return null;
     }
 
-    @PostMapping("/{uid}")
+    @PostMapping("")
     public ResponseEntity<User> createUser(@PathVariable Long uid, @RequestBody User user) {
         // TODO: Implement UserService invocation
         return null;
     }
 
+    @GetMapping("/{uid}")
+    public ResponseEntity<User> getUserById(@PathVariable Long uid) {
+        // TODO: Implement UserService invocation
+        return null;
+    }
+
     @PutMapping("/{uid}")
-    public ResponseEntity<User> updateUser(@PathVariable Long uid, @RequestBody User user) {
+    public ResponseEntity<User> updateUserById(@PathVariable Long uid, @RequestBody User user) {
         return null;
     }
 
     @DeleteMapping("/{uid}")
-    public ResponseEntity<User> deleteUser(@PathVariable Long uid) {
+    public ResponseEntity<User> deleteUserById(@PathVariable Long uid) {
         return null;
     }
 }
