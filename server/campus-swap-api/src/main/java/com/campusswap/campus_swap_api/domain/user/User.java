@@ -43,6 +43,10 @@ public class User implements Serializable {
     @Column(nullable = false)
     private String email;
 
+    @OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "user_profile_id", referencedColumnName = "id")
+    private UserProfile userProfile;
+
     @CreatedDate
     @Column(nullable = false, updatable = false)
     private Instant createdAt;

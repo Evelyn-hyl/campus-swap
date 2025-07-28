@@ -9,9 +9,41 @@ import jakarta.persistence.OneToOne;
 public class UserProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long profile_id;
+    private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User user_id;
+    @Column(nullable = false)
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
+
+    @Column(nullable = false)
+    private String university;
+
+    @Lob
+    @Column(nullable = false)
+    private String profileText;
+
+    @OneToOne(mappedBy = "userProfile", fetch = FetchType.EAGER)
+    private User user;
+
+    @Override
+    public String toString() {
+        return String.format(
+                "UserProfile[id=%d, firstName=%s, lastName=%s]",
+                id, firstName, lastName
+        );
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getProfileText() {
+        return profileText;
+    }
 }
