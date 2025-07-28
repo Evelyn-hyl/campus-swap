@@ -14,6 +14,4 @@ public class UserService {
     public UserService(UserRepository pUserRepository) {
         userRepository = pUserRepository;
     }
-
-
 }
