@@ -26,7 +26,8 @@ public class User implements Serializable {
     public enum AuthProvider {
         LOCAL,
         GOOGLE,
-        META
+        META,
+        GITHUB
     }
 
     @Enumerated(EnumType.STRING)
