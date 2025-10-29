@@ -13,7 +13,8 @@
 
 .search-results-main-content-wrapper {
   height: 100%;
-  padding: 100px 350px;
+  width: 80%;
+  padding: 100px 0px;
 }
 
 .footer-wrapper {
