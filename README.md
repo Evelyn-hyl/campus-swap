@@ -2,8 +2,8 @@
 <img width="1919" height="910" alt="Screenshot 2025-10-25 154548" src="https://github.com/user-attachments/assets/956ebce2-b58f-491f-8f6e-925384424b2d" />
 <img width="1919" height="911" alt="Screenshot 2025-10-25 154600" src="https://github.com/user-attachments/assets/741b8028-651f-44ff-9c3a-ca8642eb93d1" />
 
-## 🏫 CampusSwap — A Secure Marketplace for Students
-CampusSwap is a full-stack web application that enables college students to exchange, sell, and list campus-related items or services in a safe and authenticated environment.
+## 🏫 CampusSwap — A Second-Hand Goods Marketplace for College Students
+CampusSwap is a full-stack web application that enables college students to exchange, sell, and list campus-related items.
 
 Designed with a focus on usability and trust, CampusSwap integrates Auth0 authentication, React for the frontend, and a Spring Boot REST API backend to provide a smooth, secure, and scalable experience.
 
