@@ -12,13 +12,17 @@
 }
 
 .main-content-wrapper {
-  height: 100%;
+  /* Make main take available viewport space but leave room for the footer so the
+     footer sits at the bottom without adding extra whitespace below it. */
+  min-height: calc(100vh - 380px);
   padding: 50px 100px;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .footer-wrapper {
   height: 380px;
+  /* footer is in normal document flow; `bottom: 0` isn't needed unless positioned */
   background-color:#fff9ef;
 }
 
@@ -107,7 +111,7 @@
 .divider {
   position: relative;
   padding-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .divider::after {
@@ -118,6 +122,5 @@
   width: 100%;
   height: 0.5px;
   margin-top: 10px;
-  margin-bottom: 10px;
   background-color: #9db7aa;
 }

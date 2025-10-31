@@ -2,31 +2,9 @@ import { Box, Grid2, Card, CardContent, Typography, CardMedia, IconButton } from
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { useState, useRef, useEffect } from 'react';
 import './ProductGrid.css';
 
-export function ProductGrid() {
-    const [products, setProducts] = useState([]);
-    const [isProductsLoaded, setIsProductsLoaded] = useState(false);
-
-    useEffect(() => {
-        async function fetchProducts() {
-            try {
-                const res = await fetch('http://localhost:8080/api/products');
-                const data = await res.json();
-                console.log("Products:", data);
-                setProducts(data);
-                setIsProductsLoaded(true);
-            } catch (err) {
-                console.error("Error fetching products:", err);
-            }
-        }
-
-        fetchProducts();
-        setIsProductsLoaded(true);
-
-    }, []);
-
+export function ProductGrid({ products, isProductsLoaded }) {
     return (
         <>
             { isProductsLoaded ? (
@@ -80,9 +58,8 @@ export function ProductGrid() {
                                     </IconButton>
 
                                     <CardContent sx={{ pt: 2}} className='product-card-content'>
-                                    <Typography variant="body1" sx={{ fontFamily: 'LexandDeca', color: '#9db7aa', marginBottom: '2px' }}>{product.name}</Typography>
-                                    <Typography variant="body1" sx={{ fontFamily: 'LexandDeca', color: '#9db7aa', marginBottom: '2px' }}>{product.brand}</Typography>
-                                    <Typography variant="body1" sx={{ fontFamily: 'TheBoldFont', color: '#484238', marginTop: '-1px', fontSize: '1rem', }}>{product.price}</Typography>
+                                    <Typography variant="body1" sx={{ fontFamily: 'LexandDeca', color: '#484238', marginTop: '-3px', marginBottom: '-3px' }}>{product.name}</Typography>
+                                    <Typography variant="body1" sx={{ fontFamily: 'TheBoldFont', color: '#484238', marginTop: '4px'}}>{product.price}</Typography>
                                     </CardContent> 
                                 </Box>
                             </Link>

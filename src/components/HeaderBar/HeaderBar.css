@@ -1,6 +1,6 @@
 .header-bar {
     display: flex;
-    padding: 20px 80px 5px 80px;
+    padding: 20px 30px 5px 30px;
     min-height: 45px;
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
     align-items: center;
@@ -10,6 +10,11 @@
 .logo-wrapper {
   display: inline-flex;
   align-items: center;
+}
+
+.header-bar a {
+  display: inline-flex;
+  text-decoration: none;
 }
 
 #logo-img {

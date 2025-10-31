@@ -1,6 +1,7 @@
 import './HeaderBar.css';
 import logo from '../../assets/Campus-Swap-Logo.svg'
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from 'react-router-dom';
 
 export function HeaderBar() {
     const { loginWithRedirect, logout, isAuthenticated }= useAuth0();
@@ -8,7 +9,9 @@ export function HeaderBar() {
 
     return (
         <div className="header-bar">
-            <img src={logo} id='logo-img' alt='CAMPUS SWAP'></img>
+            <Link to="/">
+                <img src={logo} id='logo-img' alt='CAMPUS SWAP' />
+            </Link>
 
             {/* login section wrapper */}
             <div className='login-button-wrapper'>

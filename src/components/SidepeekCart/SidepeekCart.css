@@ -1,23 +1,27 @@
 .sidepeek-cart {
     position: fixed;
-    top: 0px;
+    top: 190px; /* Give space from top header */
     right: -600px;
-    width: 290px;
-    height: 100%;
-    padding: 40px 40px 40px 40px;
+    width: 200px;
+    height: calc(100vh - 200px); /* Reduced height to create bottom gap */
+    max-height: 600px; /* Slightly shorter max-height */
+    padding: 40px;
     background-color: #ffffff;
     transition: right 0.4s ease;
     z-index: 1100;
     overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
     font-family: 'TheBoldFont';
     color: #fff9ef;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .sidepeek-cart--open {
-    right: 0px;
+    right: 20px; /* Space between cart and viewport edge */
 }
 
 .sidepeek-cart_top {
@@ -50,7 +54,6 @@
 
 .divider {
     position: relative;
-    padding-top: 20px;
   }
   
 .divider::after {
@@ -64,15 +67,25 @@
 }
 
 .sidepeek-cart_content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 80px); /* Subtract height of top section + divider */
+    position: relative;
+}
+
+.sidepeek-cart_item-list {
     flex: 1;
     overflow-y: auto;
-    position: relative;
+    padding-bottom: 20px;
 }
 
 .sidepeek-cart_checkout-button-wrapper {
     width: 100%;
+    padding: 20px 0;
+    background-color: #ffffff;
+    position: sticky;
+    bottom: 0;
     margin-top: auto;
-    padding-top: 20px;
 }
 
 .checkout-button {
@@ -81,8 +94,7 @@
     background-color: #9db7aa;
     border: none;
     color: #fff9ef;
-    position: absolute;
-    bottom: 80px;
+    position: relative;
     font-family: 'TheBoldFont', Impact;
     letter-spacing: 2px;
     border-radius: 20px;

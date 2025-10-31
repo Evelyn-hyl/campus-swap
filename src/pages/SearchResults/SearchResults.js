@@ -5,8 +5,8 @@ import { SidepeekCart } from '../../components/SidepeekCart/SidepeekCart.js'
 import { SidepeekFilters } from '../../components/SidepeekFilters/SidepeekFilters.js';
 import { ProductGrid } from '../../components/ProductGrid/ProductGrid.js';
 import { Footer } from '../../components/Footer/Footer.js'
+import { useState, useEffect } from 'react';
 
-import { useState } from 'react';
 import { IconContext } from "react-icons"
 import { MdFilterListAlt } from "react-icons/md";
 import './SearchResults.css';
@@ -15,6 +15,38 @@ export default function SearchResults() {
     const [isMenuOpened, setIsMenuOpened] = useState(false);
     const [isCartOpened, setIsCartOpened] = useState(false);
     const [isFiltersOpened, setIsFiltersOpened] = useState(false);
+    const [products, setProducts] = useState([]);
+    const [isProductsLoaded, setIsProductsLoaded] = useState(false);
+
+    useEffect(() => {
+        let isMounted = true; // Track mounted state
+
+        async function fetchProducts() {
+            try {
+                const res = await fetch('http://localhost:8080/api/products');
+                const data = await res.json();
+                console.log("Products:", data);
+                // Only update state if component is still mounted
+                if (isMounted) {
+                    setProducts(data);
+                    setIsProductsLoaded(true);
+                }
+            } catch (err) {
+                console.error("Error fetching products:", err);
+                // Only update error state if still mounted
+                if (isMounted) {
+                    setIsProductsLoaded(true); // Set loaded even on error to show empty state
+                }
+            }
+        }
+
+        fetchProducts();
+
+        // Cleanup function
+        return () => {
+            isMounted = false; // Prevent state updates after unmount
+        };
+    }, []);
 
     const openMenu = () => {
     setIsMenuOpened(true);
@@ -89,7 +121,7 @@ export default function SearchResults() {
                 </div>
             </div>
             
-            <ProductGrid />
+            <ProductGrid products={products} isProductsLoaded={isProductsLoaded} />
         </main>
 
         <footer className='footer-wrapper'>

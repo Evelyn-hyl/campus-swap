@@ -15,14 +15,19 @@
 }
 
 @font-face {
-  font-family: 'LexandDeca';
+  font-family: 'LexandDecaBold';
   font-weight: bold;
   src: url(./assets/LexendDeca-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'LexandDecaExtraLight';
+  src: url(./assets/LexendDeca-ExtraLight.woff) format('woff');
 }
 
 html, body {
   margin: 0;
   padding: 0;
   background-color: #fff9ef;
-
+  height: 100%;
 }

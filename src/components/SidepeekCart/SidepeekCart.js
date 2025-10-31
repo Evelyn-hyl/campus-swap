@@ -5,9 +5,6 @@ import { IconContext } from "react-icons";
 export function SidepeekCart({ isOpened, onClose }) {
     return (
         <>
-            {/* Overlay */}
-            <div className={`overlay ${isOpened? 'overlay--visible' : ''}`} onClick={onClose}></div>
-
             {/* Sidepeek Cart */}
             <div className={`sidepeek-cart ${isOpened? 'sidepeek-cart--open' : ''}`}>
         

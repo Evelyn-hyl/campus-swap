@@ -1,26 +1,31 @@
 .sidepeek-menu {
     position: fixed;
-    top: 170px;
+    top: 190px; /* Match cart's top spacing */
     left: -600px;
-    width: 290px;
-    height: calc(100% - 170px);
-    padding: 60px 0px 40px 60px;
+    width: 200px; /* Match cart's width */
+    height: calc(100vh - 200px); /* Match cart's height calculation */
+    max-height: 600px; /* Match cart's max-height */
+    padding: 40px;
     background-color: #9db7aa;
     transition: left 0.4s ease;
     z-index: 1100;
     overflow-y: auto;
     font-family: 'TheBoldFont';
     color: #fff9ef;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1); /* Mirror cart's shadow */
+    border-radius: 20px; /* Rounded corners on right side */
+    display: flex;
+    flex-direction: column;
   }
   
   .menu_list {
     margin: 0px;
-    width: 200px;
+    width: 100%; /* Full width of container */
     background-color: #9db7aa;
     list-style-type: none;
     letter-spacing: 2px;
     cursor: pointer;
+    padding: 0;
   }
   
   .menu_list li {
@@ -33,23 +38,5 @@
   }
   
   .sidepeek-menu--open {
-    left: 0px;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 170px; /* Start from top; adjust if header is fixed */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s;
-    z-index: 999; /* Below the sidepeek menu */
-  }
-  
-  .overlay--visible {
-    visibility: visible;
-    opacity: 1;
+    left: 20px; /* Match cart's right spacing */
   }

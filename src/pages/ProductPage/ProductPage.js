@@ -4,31 +4,65 @@ import { SidepeekMenu } from "../../components/SidepeekMenu/SidepeekMenu";
 import { SidepeekCart } from "../../components/SidepeekCart/SidepeekCart";
 import { Footer } from "../../components/Footer/Footer";
 import { useEffect, useState } from 'react';
-import { Box, Grid2, Fade, CardMedia, IconButton } from '@mui/material';
+import { Box, Grid2, Fade, CardMedia, IconButton, Typography } from '@mui/material';
 import { FaRegHeart } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { useParams } from "react-router-dom";
 
 import './ProductPage.css';
 import products from "../../data/mockProductDb";
+import { ItemDetailsAccordion } from "../../components/ItemDetailsAccordion";
 
 export default function ProductPage() {
     const { id } = useParams();
     const [isMenuOpened, setIsMenuOpened] = useState(false);
     const [isCartOpened, setIsCartOpened] = useState(false);
     const [fadeIn, setFadeIn] = useState(false);
-    
-    const product = products.find((item) => String(item.id) === id);
 
-    const [mainImage, setMainImage] = useState(product.images[0]);
+    const [product, setProduct] = useState(null);
+    const [productImages, setProductImages] = useState([]);
+    const [mainImage, setMainImage] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        async function fetchProduct() {
+            try {
+                const response = await fetch(`http://localhost:8080/api/products/${id}`);
+                if (!response.ok) throw new Error('Product not found');
+                const data = await response.json();
+                setProduct(data);
+
+                const urls = (data.images || []).map((img) => (typeof img === 'string' ? img : img.imageUrl));
+                setProductImages(urls);
+                setMainImage(urls[0] ?? null);
+
+                setIsLoading(false);
+                console.log('[Product Data]:', urls.slice(0, 3));
+            } catch (err) {
+                console.error('Error fetching product:', err);
+                setIsLoading(false);
+            }
+        }
+
+        fetchProduct();
         window.scrollTo(0, 0);
         setFadeIn(true);
-    }, []);
+    }, [id]);
+
+    if (isLoading) {
+        return (
+            <Typography variant="h6" sx={{ fontFamily: 'LexandDeca', color: '#484238', textAlign: 'center', marginTop: '20px' }}>
+                Loading...
+            </Typography>
+        );
+    }
 
     if (!product) {
-    return <p>Product not found.</p>;
+        return (
+            <Typography variant="h6" sx={{ fontFamily: 'LexandDeca', color: '#484238', textAlign: 'center', marginTop: '20px' }}>
+                Product not found.
+            </Typography>
+        );
     }
 
     const openMenu = () => {
@@ -118,25 +152,24 @@ export default function ProductPage() {
                             </IconButton>
 
                             <Box display="flex" gap={1} mt={0} sx={{ overflow: 'hidden' }}>
-                                {product.images.map((img, index) => {
+                                {productImages.map((img, index) => {
                                     return (
                                         <CardMedia
-                                        key={index}
-                                        component="img"
-                                        image={img}
-                                        sx={{ width: 100, 
-                                            height: 100, 
-                                            objectFit: 'cover', 
-                                            cursor: 'pointer', 
-                                            border: '2px solid transparent',
-                                            borderRadius: '15px',
-                                            transition: 'transform 0.3s ease-out, border-color 0.3s ease-out',
-                                            '&:hover': {
-                                                borderColor: '#9db7aa',
-                                            },
-                                        }}
-                                        onMouseEnter={() => setMainImage(img)}
-                                        
+                                            key={index}
+                                            component="img"
+                                            image={img}
+                                            sx={{ width: 100,
+                                                height: 100,
+                                                objectFit: 'cover',
+                                                cursor: 'pointer',
+                                                border: '2px solid transparent',
+                                                borderRadius: '15px',
+                                                transition: 'transform 0.3s ease-out, border-color 0.3s ease-out',
+                                                '&:hover': {
+                                                    borderColor: '#9db7aa',
+                                                },
+                                            }}
+                                            onMouseEnter={() => setMainImage(img)}
                                         />
                                     )
                                 })}
@@ -150,9 +183,9 @@ export default function ProductPage() {
                                 <p className="product-price">US { product.price }</p>
                                 <button className="button">Buy Now</button>
                                 <button className="green-button">Add to Cart</button>
-                                <button className="green-button">Offer</button>
+                                <button className="green-button">Make Offer</button>
                                 <div className="divider"></div>
-                                <p className="product-brief-description">{ product.description }</p>
+                                <ItemDetailsAccordion product={product} />
                             </div>
                             
                         </Grid2>

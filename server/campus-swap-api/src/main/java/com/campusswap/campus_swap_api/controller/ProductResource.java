@@ -17,7 +17,11 @@ public class ProductResource {
     @GetMapping
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
-        
+    }
+
+    @GetMapping("/{id}")
+    public Product getProduct(@PathVariable Long id) {
+        return productService.getProduct(id);
     }
 
     @PostMapping

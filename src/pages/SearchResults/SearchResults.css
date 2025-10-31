@@ -14,6 +14,8 @@
 .search-results-main-content-wrapper {
   height: 100%;
   width: 80%;
+  max-width: 1200px; /* keep content from growing too wide on large screens */
+  margin: 0 auto; /* center the main content horizontally */
   padding: 100px 0px;
 }
 

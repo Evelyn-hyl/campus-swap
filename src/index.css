@@ -1,0 +1,15 @@
+/* Hide scrollbars while keeping scroll functionality */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+html, body {
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}

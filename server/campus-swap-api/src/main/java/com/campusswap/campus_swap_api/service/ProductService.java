@@ -17,6 +17,11 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+    public Product getProduct(Long id) {
+        return productRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Product not found"));
+    }
+
     public Product addProduct(Product product) {
         return productRepository.save(product);
     }
