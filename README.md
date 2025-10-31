@@ -1,6 +1,6 @@
 # CampusSwap
-<img width="1919" height="910" alt="Screenshot 2025-10-25 154548" src="https://github.com/user-attachments/assets/956ebce2-b58f-491f-8f6e-925384424b2d" />
-<img width="1919" height="911" alt="Screenshot 2025-10-25 154600" src="https://github.com/user-attachments/assets/741b8028-651f-44ff-9c3a-ca8642eb93d1" />
+<img width="1640" height="909" alt="Screenshot 2025-10-30 222609" src="https://github.com/user-attachments/assets/5af4728b-650a-43a7-9fd1-90d32fb1cf23" />
+<img width="1641" height="909" alt="Screenshot 2025-10-30 222549" src="https://github.com/user-attachments/assets/72bc6855-0628-4a39-8233-66543fa07c89" />
 
 ## 🏫 CampusSwap — A Second-Hand Goods Marketplace for College Students
 CampusSwap is a full-stack web application that enables college students to exchange, sell, and list campus-related items.
