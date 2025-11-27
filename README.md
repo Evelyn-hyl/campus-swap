@@ -9,13 +9,7 @@ Designed with a focus on usability and trust, CampusSwap integrates Auth0 authen
 
 ## 💡 Core Features
 ## 🔐 Secure Authentication with Auth0
-OAuth 2.0 & OIDC-based login ensures only verified campus users can access the marketplace. Tokens are validated by the backend, eliminating the need for manual user management.
-
-## 🏷️ Item & Service Listings
-Users can post, update, and manage listings with details like title, price, condition, and category.
-
-## 💬 User-to-User Interaction
-Direct messaging or contact features allow verified students to communicate safely.
+OAuth 2.0 & OIDC-based login ensures only verified campus users can access the marketplace.
 
 ## 🌐 Modern Frontend
 Built in React, emphasizing responsive design and accessibility for both desktop and mobile users.
@@ -30,4 +24,12 @@ Service → Encapsulates business logic
 Repository → Handles database operations (JPA / PostgreSQL)
 
 ## 🧰 Tech Stack
-Layer Technology Frontend React, Auth0 SDK, Tailwind CSS Backend Spring Boot (Web, JPA, Security) Database PostgreSQL (H2 for local dev) Auth Auth0 (OIDC + JWT) Architecture RESTful MVC
+Layer Technology Frontend React, Auth0 SDK, Backend Spring Boot (Web, JPA, Security) Database PostgreSQL (H2 for local dev) Auth Auth0 (OIDC + JWT) Architecture RESTful MVC
+
+## Upcoming Features
+
+### 🏷️ Item & Service Listings
+Users can post, update, and manage listings with details like title, price, condition, and category.
+
+### 💬 User-to-User Interaction
+Direct messaging or contact features allow verified students to communicate safely.
