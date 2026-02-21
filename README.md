@@ -1,4 +1,5 @@
 # CampusSwap
+This is a project I started, inspired by my frequent moving between apartments as an international student. I was troubled by dealing with unwanted furniture and items during my moves, and I saw that many international students had the same problem. So I built CampusSwap, which allows students in the same or neighboring campuses to purchase or exchange second-hand items. This is still a work-in-progress. 
 <img width="1640" height="909" alt="Screenshot 2025-10-30 222609" src="https://github.com/user-attachments/assets/5af4728b-650a-43a7-9fd1-90d32fb1cf23" />
 <img width="1641" height="909" alt="Screenshot 2025-10-30 222549" src="https://github.com/user-attachments/assets/72bc6855-0628-4a39-8233-66543fa07c89" />
 
